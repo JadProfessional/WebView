@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="WebView.ContainUI.SettingsViews.AppearancePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WebView.ContainUI.SettingsViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x1="using:CommunityToolkit.Labs.WinUI" xmlns:io="using:System.IO"
+    mc:Ignorable="d" Background="{ThemeResource SolidBackgroundFillColorTertiaryBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!--Page title row-->
+            <RowDefinition /> <!--Page content row-->
+        </Grid.RowDefinitions>
+        <TextBlock Text="Appearance" Style="{StaticResource TitleTextBlockStyle}" />
+        <StackPanel Grid.Row="1" Margin="12">
+            <x1:SettingsCard Header="App theme" Description="Select the app theme to display.">
+                <x1:SettingsCard.HeaderIcon>
+                    <FontIcon FontFamily="{StaticResource SettingsThemeFontFamily}" Glyph="&#xE795;" />
+                </x1:SettingsCard.HeaderIcon>
+                <ComboBox x:Name="ComboBox">
+                    <x:String>
+                        Light
+                    </x:String>
+                    <x:String>
+                        Dark
+                    </x:String>
+                    <x:String>
+                        Use system setting
+                    </x:String>
+                </ComboBox>
+            </x1:SettingsCard>
+        </StackPanel>
+    </Grid>
+</Page>
